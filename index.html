@@ -11,6 +11,44 @@
   padding: 0;
 }
 
+/* responive grid */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* end responsive */
 @-webkit-keyframes typing {
     from { width: 0 }
     to { width:8em }
@@ -162,21 +200,7 @@ li a:hover {
 
 /* Grid */
 
-@media screen and (max-width: 800px) {
-  .gallery {
-    flex: 50%;
-    max-width: 50%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 5vw);
-  }
-}
 
-@media screen and (max-width: 600px) {
-  .gallery {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 
 .gallery {
     display: flex;
@@ -323,6 +347,16 @@ li a:hover {
   <h1>Cesar Matta</h1>
   <p class="backcolor">Freelance Web Developer.</p>
 </section>
+
+<!-- test responsive !-->
+<div class="row">
+  <div class="column">
+    <a href ="https://www.opurepiscine.fr/" target="_blank" class="project project-tile"> <img src="https://imgur.com/G3W8VGP.png">
+    <a href ="https://vivreenpaix-paca.fr/" target="_blank" class="project project-tile"> <img src="https://imgur.com/NlUdVL2.png">
+    <a href ="https://lookneon.com/" target="_blank" class="project project-tile"> <img src="https://imgur.com/RfK3ap5.png">
+    <a href ="https://meublesburgaud.fr/" target="_blank" class="project project-tile"> <img src="https://imgur.com/1v6Oajs.png"
+    
+  </div>
 
 <section id="projects" class="projects-section">
   <h2 class="projects-section-header"> Websites i've done </h2> 
